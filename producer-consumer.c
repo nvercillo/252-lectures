@@ -3,8 +3,9 @@
 #include<pthread.h>
 #include<unistd.h>
 #include<semaphore.h>
-#include<math.h> 
-
+#include<math.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 
 #define B 20
 
