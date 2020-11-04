@@ -21,13 +21,13 @@ int produce(){
 }
 
 void consume(int value){
-    printf("consumed %d", value);
+    printf("consumed %d\n", value);
 }
 
 
 void * producer (void *arg) {
     int pindex = 0;
-    while(counter < 10000){
+    while(counter < 1000){
         int v = produce();
         sem_wait( &spaces) ;
         buffer[pindex] = v;
