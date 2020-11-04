@@ -33,7 +33,7 @@ void * producer (void *arg) {
         pindex = (pindex+1) % B;
         sem_post(&items);
     }
-    return;
+    return NULL;
 }
 
 void * consumer (void * ar) {
@@ -48,7 +48,7 @@ void * consumer (void * ar) {
         consume(temp);
         ++ctotal;
     }
-    return;   
+    return NULL;   
 }
 
 int main(int argc, char ** argv){
@@ -74,5 +74,5 @@ int main(int argc, char ** argv){
     sem_destroy(&spaces);
     sem_destroy(&items);
 
-    return;
+    return 0;
 }
