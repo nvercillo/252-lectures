@@ -40,7 +40,7 @@ void * producer (void *arg) {
 void * consumer (void * ar) {
     int cindex=0; 
     int ctotal = 0;
-    while( ctotal < 10000){
+    while( ctotal < 1000){
         sem_wait(&items);
         int temp = buffer[cindex];
         buffer[cindex] = -1;
